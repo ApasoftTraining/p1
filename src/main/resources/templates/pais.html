@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>P�gina Principal</title>
+</head>
+<body>
+    <h1> Bienvenido a mi aplicacion Spring</h1>
+    <h2  th:text=" 'El codigo de pais es:' + ${pais_modelo.codigopais}  "></h2>
+    <h2  th:text=" 'El nombre del pais es:' + ${pais_modelo.nombrepais}"></h3>
+    
+    
+</body>
+</html>

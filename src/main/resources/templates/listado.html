@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Aplicacion Proyecto BECA JAVA</title>
+</head>
+<body>
+	<h1>LISTADO DE PAISES</h1>
+	<ol>
+		<li th:each="p1:${listadopaises}" th:text=" 'Pais=>'+${p1}"></li>
+	</ol>
+	<br>
+	<br>
+	<p>=============================</p>
+	<h1>LISTADO DE PROVINCIAS</h1>
+	<ol>
+		<li th:each="p2:${listadoprovincias}" th:text=" 'Provincia=>'+${p2}"></li>
+	</ol>
+
+	<br>
+	<br>
+	<p>=============================</p>
+	<h1>LISTADO DE PROVINCIAS (EN UNA TABLA HTML)</h1>
+	<table border=2px>
+		<tr th:each="p1:${listadoprovincias}">
+			<td th:text="${p1}"></td>
+		</tr>
+	</table>
+
+
+</body>
+</html>

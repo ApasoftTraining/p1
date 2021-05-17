@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>P�gina Principal</title>
+</head>
+<body>
+    <img th:src="@{/images/logo.png}" >
+    <h1> Bienvenido a mi aplicacion Spring</h1>
+    
+   <table style="border: 2px solid black;">
+		<tr>
+		<td th:text="${provincia1.nombreProvincia}"></td>
+		<td th:text="${provincia1.codigoProvincia}"></td>
+		<td th:text="${provincia1.codigoPais}"></td>
+		<td> 
+			<img th:src="@{/images/1.png}" width="20"  height="20">
+		</td>
+		</tr>
+		<tr>
+		<td th:text="${provincia2.nombreProvincia}"></td>
+		<td th:text="${provincia2.codigoProvincia}"></td>
+		<td th:text="${provincia2.codigoPais}"></td>
+		<td>
+			<img th:src="@{/images/}+${provincia2.codigoPais}+'.png'" width="20"  height="20"></td>
+		</tr>
+		<tr>
+		<td th:text="${provincia3.nombreProvincia}"></td>
+		<td th:text="${provincia3.codigoProvincia}"></td>
+		<td th:text="${provincia3.codigoPais}"></td>
+		<td>
+			<img th:src="@{/images/3.png}" width="20"  height="20">
+		</td>
+		</tr>
+	</table>
+
+    
+</body>
+</html>

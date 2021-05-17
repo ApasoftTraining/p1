@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>P�gina Principal</title>
+</head>
+<body>
+    <img th:src="@{/images/logo.png}" >
+    <h1> Bienvenido a mi aplicacion Spring</h1>
+    
+   <table style="border: 2px solid black;">
+		<tr th:each="p2:${provincias}" >
+		<td th:text="${p2.nombreProvincia}"></td>
+		<td th:text="${p2.codigoProvincia}"></td>
+		<td th:text="${p2.codigoPais}"></td>
+		<td> 
+			<img th:src="@{/images/1.png}" width="20"  height="20">
+		</td>
+		<td>
+		   <a th:href="@{/informes/listado/{x} (x=${p2.codigoProvincia})  }">Ver Provincia</a>
+		</td>
+		<td>
+		   <a th:href="@{/informes/listado1/{x}/{z} (x=${p2.codigoProvincia},z=${p2.nombreProvincia})  }">Ver Detalle Provincia</a>
+		</td>	
+		<td>
+		   <a th:href="@{/informes/listado2(codProvincia=${p2.codigoProvincia})  }">Verlo como RequestParam</a>
+		</td>            	
+		</tr>
+		
+	</table>
+
+    
+</body>
+</html>
